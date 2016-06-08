@@ -8,7 +8,7 @@ html {
 body {
     padding-top: $navbar-height * 1.1;
     padding-bottom: $footer-height * 3;
-    background: url("assets/img/lakeunion.jpg");
+    background-image: url("../img/lakeunion.jpg");
 }
 
 header {
@@ -30,7 +30,7 @@ header {
 .footer {
     position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 90%;
     height: $footer-height;
     font-size: small;
     margin: 0px;
