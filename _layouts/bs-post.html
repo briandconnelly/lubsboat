@@ -31,8 +31,7 @@ layout: bootstrap
         </div>
     </div>
     <div class="row">
-        {% if page.sidebar %}<div class="col-md-9 maincol">
-        {% else %}<div class="col-md-12 maincol">{% endif %}
+        <div class="col-md-12 maincol">
 
             <article>
                 {{ content }}
@@ -53,11 +52,6 @@ layout: bootstrap
             {% include authorinfo.html %}
 
         </div>
-        {% if page.sidebar %}
-        <div class="col-md-3 sidebar">
-            {% include sidebar/default.html %}
-        </div>
-        {% endif %}
     </div>
 </div>
 

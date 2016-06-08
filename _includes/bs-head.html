@@ -12,21 +12,7 @@
     {% endif %}
     {% if description %}<meta name="description" content="{{ description }}">{% endif %}
 
-
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}: Main Feed" href="{{ "/feeds/rss.xml" | prepend: site.baseurl | prepend: site.url }}">
-    {% for tag in page.tags %}<link rel="alternate" type="application/rss+xml" title="{{ site.title }}: Articles Tagged '{{ tag }}'" href="{{ tag | prepend: "/feeds/" | prepend: site.baseurl | prepend: site.url }}/">
-    {% endfor %}
-    {% if page.tag %}<link rel="alternate" type="application/rss+xml" title="{{ site.title }}: Articles Tagged '{{ page.tag }}'" href="{{ page.tag | prepend: "/feeds/" | prepend: site.baseurl | prepend: site.url }}/">{% endif %}
-    <script type="application/ld+json">
-    {
-        "@context" : "http://schema.org",
-        "@type" : "WebSite",
-        "name" : "{{ site.title }}",
-        {% if site.tagline %}"description" : "{{ site.tagline }}",{% endif %}
-        "url" : "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
-    }
-    </script>
 
 
     <!-- CSS: Bootstrap, shThemeBDC, and modifications -->
