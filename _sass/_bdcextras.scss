@@ -21,6 +21,10 @@ header {
     margin-bottom: 2em;
 }
 
+.topnav {
+    background: none;
+}
+
 .highlightme
 {
     font-weight: bold;
@@ -36,7 +40,7 @@ header {
 .footer {
     position: absolute;
     bottom: 0;
-    width: 90%;
+    width: 100%;
     height: $footer-height;
     font-size: small;
     margin: 0px;
