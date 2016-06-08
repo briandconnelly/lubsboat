@@ -5,4 +5,6 @@ permalink: /about/
 main_menu: true
 ---
 
-This is the about page
+<div class="container">
+    This is the about page
+</div>
