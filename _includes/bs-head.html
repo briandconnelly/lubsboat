@@ -12,7 +12,6 @@
     {% endif %}
     {% if description %}<meta name="description" content="{{ description }}">{% endif %}
 
-    {% include favicon.html %}
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}: Main Feed" href="{{ "/feeds/rss.xml" | prepend: site.baseurl | prepend: site.url }}">
@@ -29,9 +28,6 @@
     }
     </script>
 
-    {% include analytics.html %}
-    {% include twittercard.html %}
-    {% include opengraph.html %}
 
     <!-- CSS: Bootstrap, shThemeBDC, and modifications -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css" rel="stylesheet">
