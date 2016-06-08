@@ -1,0 +1,69 @@
+---
+layout: bootstrap
+---
+{% assign author = site.data.people[page.author] %}
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{{ page.title }}",
+    {% if page.blurb %}"alternativeHeadline": "{{ page.blurb }}",
+    {% elsif page.subtitle %}"alternativeHeadline": "{{ page.subtitle }}",{% endif %}
+    "image": [
+        "{{ page.featured_image | prepend: '/assets/img/rifttt/' | prepend: site.baseurl | prepend: site.url }}",
+        "{{ page.thumbnail | prepend: '/assets/img/rifttt/' | prepend: site.baseurl | prepend: site.url }}"
+    ],
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    {% if description %}"description": "{{ description }}",{% endif %}
+    "url": "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+}
+</script>
+
+<div class="container post">
+    <div class="row">
+        <div class="col-md-12 page-header title">
+            <header>
+                <h1>{{ page.title }}{% if page.subtitle %} <small>{{ page.subtitle }}</small>{% endif %}</h1>
+                {% if page.blurb %}<div class="blurb">{{ page.blurb }}</div>{% endif %}
+                <p class="text-muted byline">By {{ author.name }}<br/><small><i class="fa fa-clock-o"></i> {{ page.date | date: "%B %-d, %Y" }}</small></p>
+            </header>
+        </div>
+    </div>
+    <div class="row">
+        {% if page.sidebar %}<div class="col-md-9 maincol">
+        {% else %}<div class="col-md-12 maincol">{% endif %}
+
+            <article>
+                {{ content }}
+            </article>
+
+            {% if page.tags %}
+            <div class="posttags">
+                <p class="text-muted"><i class="fa fa-tags"></i> {{ page | tags }}</p>
+            </div>
+            {% endif %}
+
+            {% if page.sharing %}
+            <div class="sharebuttons">
+                {% include sharing.html %}
+            </div>
+            {% endif %}
+
+            {% include authorinfo.html %}
+
+            {% if page.comments %}
+            <div class="disqus" id="comments">
+                {% include disqus.html %}
+            </div>
+            {% endif %}
+
+        </div>
+        {% if page.sidebar %}
+        <div class="col-md-3 sidebar">
+            {% include sidebar/default.html %}
+        </div>
+        {% endif %}
+    </div>
+</div>
+
