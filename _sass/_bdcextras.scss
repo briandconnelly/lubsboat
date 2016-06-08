@@ -19,10 +19,14 @@ body {
 
 header {
     margin-bottom: 2em;
+    background-color: red;
+    color: yellow;
 }
 
 .topnav {
-    background: none;
+    background-color: black;
+    opacity: 0.5;
+    border: none;
 }
 
 .highlightme
@@ -49,7 +53,12 @@ header {
     border-left: none;
     border-right: none;
     border-bottom: none;
+
+    border-top: none;
+    display: none;
+    font-size: x-small;
 }
+
 
 .posttags {
     margin-top: 2em;
