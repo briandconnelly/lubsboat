@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: bs-page
 title: About
 permalink: /about/
 ---
