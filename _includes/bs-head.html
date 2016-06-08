@@ -1,0 +1,46 @@
+<head>
+    <meta charset="{{ site.encoding }}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+    {% if page.description %}{% assign description = page.description %}
+    {% elsif page.blurb %}{% assign description = page.blurb %}
+    {% elsif page.excerpt %}{% assign description = page.excerpt | strip_html %}
+    {% endif %}
+    {% if description %}<meta name="description" content="{{ description }}">{% endif %}
+
+    {% include favicon.html %}
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}: Main Feed" href="{{ "/feeds/rss.xml" | prepend: site.baseurl | prepend: site.url }}">
+    {% for tag in page.tags %}<link rel="alternate" type="application/rss+xml" title="{{ site.title }}: Articles Tagged '{{ tag }}'" href="{{ tag | prepend: "/feeds/" | prepend: site.baseurl | prepend: site.url }}/">
+    {% endfor %}
+    {% if page.tag %}<link rel="alternate" type="application/rss+xml" title="{{ site.title }}: Articles Tagged '{{ page.tag }}'" href="{{ page.tag | prepend: "/feeds/" | prepend: site.baseurl | prepend: site.url }}/">{% endif %}
+    <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "WebSite",
+        "name" : "{{ site.title }}",
+        {% if site.tagline %}"description" : "{{ site.tagline }}",{% endif %}
+        "url" : "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+    }
+    </script>
+
+    {% include analytics.html %}
+    {% include twittercard.html %}
+    {% include opengraph.html %}
+
+    <!-- CSS: Bootstrap, shThemeBDC, and modifications -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ "/assets/css/site.css" | prepend: site.baseurl | prepend: site.url }}">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>

@@ -1,0 +1,12 @@
+<footer class="navbar navbar-default footer">
+    <div class="container">
+        <div class="navbar-text">
+            <p>&copy; {{ site.time | date: '%Y' }} Brian Connelly</p>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://www.r-bloggers.com"><img src="{{ "/assets/img/rbloggers.png" | prepend: site.baseurl | prepend: site.url }}" class="img-responsive" alt="R-Bloggers" style="height: 24px;"></a></li>
+            <li><a href="#" data-toggle="tooltip" title="{{ site.disclaimer }}" class="text-muted">Disclaimer</a></li>
+            <li><a href="{{ "/feeds/rss.xml" | prepend: site.baseurl | prepend: site.url }}"><i class="fa fa-rss-square"></i></a></li>
+        </ul>
+    </div>
+</footer>

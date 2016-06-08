@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    {% include bs-head.html %}
+
+    <body>
+        {% include bs-header.html %}
+
+        {{ content }}
+
+        {% include bs-footer.html %}
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="{{ "/assets/js/bootstrap.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+
+    </body>
+</html>
