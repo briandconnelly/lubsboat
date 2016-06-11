@@ -151,52 +151,6 @@ header {
     }
 }
 
-.cv {
-    #toc {
-        margin-bottom: 0.5em;
-    }
-    .contactinfo {
-        /*
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
-        */
-
-        dl dd {
-            margin-bottom: 0px;
-        }
-    }
-
-    dl {
-        dt {
-            font-weight: 200;
-            color: $text-muted;
-        }
-        dd {
-            margin-bottom: 0.8em;
-            /* Try to create a "hanging indent" for items
-             * works inconsistently
-            padding-left: 1em;
-            text-indent: -1em;
-            */
-        }
-    }
-
-    h4 {
-        font-style: italic;
-    }
-}
-
-.contactpage {
-    h4 {
-        font-style: italic;
-    }
-}
-
-#map {
-    width: 100%;
-    height: 400px;
-}
-
 /* replace numbers in jekyll-scholar bibliographies with discs */
 .nonum .bibliography li {
     list-style-type: disc;
