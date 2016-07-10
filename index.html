@@ -4,6 +4,55 @@ layout: wedding
 main_menu: false
 ---
 
-<div class="well">
-    hello
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="{{ "/assets/img/kayaking.jpg" | prepend: site.baseurl | prepend: site.url }}" alt="Kayaking">
+            <div class="carousel-caption">
+                Kayaking
+            </div>
+        </div>
+        <div class="item">
+            <img src="{{ "/assets/img/lake.jpg" | prepend: site.baseurl | prepend: site.url }}" alt="Lake Union">
+            <div class="carousel-caption">
+                Lake Union
+            </div>
+        </div>
+        <div class="item">
+            <img src="{{ "/assets/img/skansonia.jpg" | prepend: site.baseurl | prepend: site.url }}" alt="MV Skansonia">
+            <div class="carousel-caption">
+                MV Skansonia
+            </div>
+        </div>
+        <div class="item">
+            <img src="{{ "/assets/img/seattle.jpg" | prepend: site.baseurl | prepend: site.url }}" alt="Seattle">
+            <div class="carousel-caption">
+                Seattle
+            </div>
+        </div>
+        <div class="item">
+            <img src="{{ "/assets/img/lakeunion-scale.jpg" | prepend: site.baseurl | prepend: site.url }}" alt="Lake Union">
+            <div class="carousel-caption">
+                Lake Union by Air (Jelson25)
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="sr-only">Next</span>
+    </a>
 </div>
