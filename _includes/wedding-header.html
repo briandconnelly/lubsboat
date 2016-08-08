@@ -5,8 +5,9 @@
             </center>
         </div>
         <div class="row xnav">
+            <!-- col-md-5ths col-sm-12 -->
 {% for page in site.pages %}{% if page.main_menu and page.title %}
-<div class="col-md-5ths col-sm-12 text-center"><a title="{{ page.title }}" href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">{{ page.title }}</a></div>
+<div class="col-md-3 col-sm-12 text-center"><a title="{{ page.title }}" href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">{{ page.title }}</a></div>
 {% endif %}{% endfor %}
         </div>
 </header>
